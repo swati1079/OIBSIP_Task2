@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://kit.fontawesome.com/93106928f8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="img/swati.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Swati</span> Singh</h1>
+            </div>
+        </div>
+    </div>
+
+<!-----------------------about------------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/swati1.jpg" alt="">
+                    
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi.... This Swati Singh. I am from Lucknow. I belong to a lower-middle class family. Right now I am pursuing my Bachelor of Computer Applications
+                        from University of Lucknow. I have completed  schooling from Kendriya Vidyalaya, Gomti Nagar, Lucknow. Currently I am a part of Training and Placement Cell
+                         as a member of Communication team. I have been Sports Captain for 2 years and I have participated in many competitions giving my best . My interest fields are coding
+                         , Data Analysis. Beyond, that I have interest in sketching, playing badminton and basketball. My professional skills are MYSql, Python, HTML , CSS. Other than that 
+                         now I am learning many other programming languages such as PHP, Javascript and many more. My native language is Hindi and I am fluent in English.
+                    </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        
+                        <p class="tab-links"  onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend Development</span><br>Website Frontend Developer</li>
+                            <li><span>UI/UX</span><br>Designing Web Interface</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2025</span><br>Bachelor of Computer Applications at University of Lucknow</li>
+                            <li><span>2022</span><br>Intermediate from Kendriya Vidyalaya, Gomti Nagar, Lucknow</li>
+                            <li><span>2020</span><br>Matrication from Kendriya Vidyalaya, Gomti Nagar, Lucknow</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------portfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/shop.png" alt="">
+                    <div class="layer">
+                        <h3>Shopping Website</h3>
+                        <p>Website Has dress from all ranges. Order Now</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/food.png" alt="">
+                    <div class="layer">
+                        <h3>FOOD Delivery Website</h3>
+                        <p>Get fresh and on time Delivry of your favorite pizza and burgers at your door steps. Order Now</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/land.png" alt="">
+                    <div class="layer">
+                        <h3>Pizza Landing Page</h3>
+                        <p>Advertise your band with a perfect landing page</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!--------contact ------------------------------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>10swatisingh200@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>+91 9309721472</p>
+                    <div class="social-icon">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/10swatisingh200"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.linkedin.com/in/swati-singh-507783257/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Resume.pdf" download class="btn">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Swati.</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-links");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+
+    </script>
+</body>
+</html>
